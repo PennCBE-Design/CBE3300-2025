@@ -24,7 +24,6 @@ x- Project management
     x- Design Controls
 -->
 
-\newpage
 
 # Software
 

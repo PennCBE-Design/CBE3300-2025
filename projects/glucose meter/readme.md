@@ -374,7 +374,7 @@ If TEOS is hydrolyzed:
 ---
 
 # Alternative Options and Project Considerations
-With all of these options, make sure you discuss with Dr. Osuji and the TA before you proceed.
+With all of these options, make sure you discuss with Dr. Osuji and/or the TA before you proceed.
 ### **Project Additions for Students**
 1. **In-Situ Mixing:**  
    - Utilize peristaltic pumps to mix high-concentration glucose solutions with solvents (PBS, water, etc.) directly in a chamber for measurements.

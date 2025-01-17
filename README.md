@@ -15,7 +15,6 @@ You can find more information about individual projects below.
 
 [Fuel cell](projects/fuel-cell/README.md)
 
-[Old Fuel cell](projects/fuel cell/README.md)
 
 
 ## Resources

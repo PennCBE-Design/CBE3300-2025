@@ -24,7 +24,7 @@ header-includes:
   - \usepackage{xurl}
 ---
 
-# Background
+# Air Quality Monitor - Background
 
 ## Premise
 

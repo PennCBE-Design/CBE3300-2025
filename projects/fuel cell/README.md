@@ -1,5 +1,5 @@
 ---
-title: "Project: Methanol Fuel Cell"
+title: "Project: Glucose Meter"
 toc: true
 toc-depth: 2
 numbersections: true
@@ -7,10 +7,10 @@ colorlinks: true
 abstract-title: Summary
 abstract: |
   The Methanol Fuel Cell prototype is able to generate electrical power from feed streams of air and methanol fed to a fuel cell stack. The device adjusts methanol and air flow rates to maintain power output that is directed to a power bank using USB connectors. Builders will gain experience with chemical processes, electrochemistry, calibration, coding in python, and likely 3D printing.
+  
+  Further extensions could include engineering membrane electrode assemblies, cost performance optimization, etc.
 
-Further extensions could include engineering membrane electrode assemblies, cost performance optimization, etc.
-
-  Approximate time: XX person-blocks.
+  Approximate time: Unknown person-blocks.
   (1 block = 1.5 hrs)
 
 header-includes:

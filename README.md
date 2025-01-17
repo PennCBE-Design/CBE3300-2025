@@ -7,8 +7,13 @@ Some resources on instrumentation, 3D printing, software, Python, intellectual p
 
 You can find more information about individual projects below:
 
-[Water purifier](/projects/water purifier/README.md)
+[Water purifier](projects/water purifier/README.md)
+
 [Air quality monitor](projects/air quality monitor/README.md)
+
 Protein detection
+
 Glucose meter
+
 Fuel cell
+

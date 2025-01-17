@@ -78,7 +78,10 @@ header-includes:
 - **Glucose Oxidase Reaction:**  
   Glucose enzymatically reacts with oxygen to form **gluconolactone** and **hydrogen peroxide**.  
   - The enzyme used is **glucose oxidase (GOx)**.
-  - This reaction specifically occurs for **beta-D-glucose**.  
+  - This reaction specifically occurs for **beta-D-glucose**.
+    
+![Figure1 Glucometer](https://github.com/user-attachments/assets/2bb8fbd1-2b15-47e3-8577-0289a2ddf166)
+
 
 - **Beta-D-Glucose Equilibration:**  
   - At room temperature, **D-glucose** takes approximately **12 hours** to equilibrate to the expected proportions of:

@@ -203,108 +203,126 @@ from potentiostat import Potentiostat
 import matplotlib.pyplot as plt
 import pandas as pd
 
-port = '/dev/tty.usbmodem1301'  # Serial port for potentiostat device this is device specific
-datafile = 'Gluten_test1_CV.txt' # Enter the path that you want the datafile to be saved in
+port = '/dev/tty.usbmodem1301'       # Serial port for potentiostat device
+datafile = 'Gluten_test1_CV_nf3_FeCN_0mgmL.txt'       # Enter the path that you want the datafile save time, curr, volt data
 
-test_name = 'cyclic'
-curr_range = '100uA'
-sample_rate = 100.0
+test_name = 'cyclic'        # The name of the test to run
+curr_range = '100uA'        # The name of the current range [-100uA, +100uA]
+sample_rate = 100.0         # The number of samples/second to collect
 
-volt_min = -0.2
-volt_max = 0.6
-volt_per_sec = 0.05
-num_cycles = 2
+volt_min =  -0.2            # The minimum voltage in the waveform (V)
+volt_max =  0.6             # The maximum voltage in the waveform (V)
+volt_per_sec = 0.05         # The rate at which to transition from volt_min to volt_max (V/s)
+num_cycles = 2              # The number of cycle in the waveform
 
-# Calculate waveform parameters
-amplitude = (volt_max - volt_min) / 2.0
-offset = (volt_max + volt_min) / 2.0
-period_ms = int(1000 * 4 * amplitude / volt_per_sec)
+# Convert parameters to amplitude, offset, period, phase shift for triangle waveform
+amplitude = (volt_max - volt_min)/2.0            # Waveform peak amplitude (V) 
+offset = (volt_max + volt_min)/2.0               # Waveform offset (V) 
+period_ms = int(1000*4*amplitude/volt_per_sec)   # Waveform period in (ms)
+shift = 0.0                                      # Waveform phase shift - expressed as [0,1] number
+                                                 # 0 = no phase shift, 0.5 = 180 deg phase shift, etc.
 
+# Create dictionary of waveform parameters for cyclic voltammetry test
 test_param = {
-    'quietValue': 0.0,
-    'quietTime': 0,
-    'amplitude': amplitude,
-    'offset': offset,
-    'period': period_ms,
-    'numCycles': num_cycles,
-}
+        'quietValue' : 0.0,
+        'quietTime'  : 0,
+        'amplitude'  : amplitude,
+        'offset'     : offset,
+        'period'     : period_ms,
+        'numCycles'  : num_cycles,
+        'shift'      : shift,
+        }
 
-# Initialize and run test
-dev = Potentiostat(port)
-dev.set_curr_range(curr_range)
+# Create potentiostat object and set current range, sample rate and test parameters
+dev = Potentiostat(port)     
+dev.set_curr_range(curr_range)   
 dev.set_sample_rate(sample_rate)
-dev.set_param(test_name, test_param)
-t, volt, curr = dev.run_test(test_name, display='data', filename=datafile)
+dev.set_param(test_name,test_param)
 
-# Save results
-df = pd.DataFrame({'time_s': t, 'voltage_V': volt, 'current_uA': curr})
-df.to_csv('Gluten_test1_CV.csv')
+# Run cyclic voltammetry test
+#t,volt,curr = dev.run_test(test_name,display='pbar',filename=datafile)
+t,volt,curr = dev.run_test(test_name,display='data',filename=datafile)
 
-# Plot results
-plt.figure()
-plt.plot(volt, curr)
-plt.xlabel('Voltage (V)')
-plt.ylabel('Current (uA)')
-plt.grid()
+# Assuming the above are lists, make a dict
+d = {'time_s': t, 'voltage_V': volt, 'current_uA': curr}
+
+# Convert to pandas dataframe
+df = pd.DataFrame(data = d)
+
+# Save to working directory
+df.to_csv(r'./Gluten_test1_CV_nf3_FeCN_0mgmL.csv')
+
+# plot results using matplotlib
+plt.figure(1)
+plt.subplot(211)
+plt.plot(t,volt)
+plt.ylabel('potential (V)')
+plt.grid('on')
+
+plt.subplot(212)
+plt.plot(t,curr)
+plt.ylabel('current (uA)')
+plt.xlabel('time (sec)')
+plt.grid('on')
+
+plt.figure(2)
+plt.plot(volt,curr)
+plt.xlabel('potential (V)')
+plt.ylabel('current (uA)')
+plt.grid('on')
+
 plt.show()
 ```
+
 #### Chronoamperometry Example
+
 ```python
 from potentiostat import Potentiostat
 import matplotlib.pyplot as plt
 import pandas as pd
 
-port = '/dev/tty.usbmodem1301'  # Serial port for potentiostat device this is device specific
-datafile = 'Gluten_test1_CV.txt' # Enter the path that you want the datafile to be saved in
+port = '/dev/tty.usbmodem1301'    
+datafile = 'glucose_test_E20A_50_mM_Test1.txt'    
 
-# Initialize potentiostat
 dev = Potentiostat(port)
 dev.set_curr_range('100uA')
 dev.set_sample_period(10)
 
-# Define chronoamperometry test parameters
 name = 'chronoamp'
 test_param = {
-    'quietValue': 0.0,
-    'quietTime': 1000,
-    'step': [
-        (0, 0.0),     # Step 1: Duration (ms), Voltage (V)
-        (29000, 0.5), # Step 2: Duration (ms), Voltage (V)
-    ],
-}
+        'quietValue' : 0.0,
+        'quietTime'  : 1000,
+        'step'       : [ 
+            (0,0.0),     # Step 1 (duration ms, voltage) 
+            (29000,0.5), # Step 2 (duration ms, voltage)
+            ],
+        }
 
-# Configure and run the test
-dev.set_param(name, test_param)
-t, volt, curr = dev.run_test(name, display='pbar', filename=datafile)
+dev.set_param(name,test_param)
+t,volt,curr = dev.run_test(name,display='pbar',filename=datafile)
 
-# Create a dictionary of results
-data = {'time_s': t, 'voltage_V': volt, 'current_uA': curr}
+# Assuming the above are lists, make a dict
+d = {'time_s': t, 'voltage_V': volt, 'current_uA': curr}
 
-# Convert to a pandas DataFrame
-df = pd.DataFrame(data=data)
+# Convert to pandas dataframe
+df = pd.DataFrame(data = d)
 
-# Save results to CSV
+# Save to working directory
 df.to_csv(r'./glucose_test_E20A_50_mM_Test1.csv')
 
-# Plot the results
-plt.figure(figsize=(10, 6))
-
-# Plot voltage vs time
 plt.subplot(211)
-plt.title('Voltage and Current vs Time')
-plt.plot(t, volt, label='Voltage')
-plt.ylabel('Voltage (V)')
-plt.ylim(0, max(volt) * 1.1)
+plt.title('Voltage and current vs time')
+plt.plot(t,volt)
+plt.ylabel('potential (V)')
+plt.ylim(0,max(volt)*1.1)
 plt.grid('on')
 
-# Plot current vs time
 plt.subplot(212)
-plt.plot(t, curr, label='Current', color='orange')
-plt.ylabel('Current (μA)')
-plt.xlabel('Time (s)')
+plt.plot(t,curr)
+plt.ylabel('current (uA)')
+plt.xlabel('time (sec)')
 plt.grid('on')
 
-plt.tight_layout()
 plt.show()
 ```
 

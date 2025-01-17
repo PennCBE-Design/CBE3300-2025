@@ -17,6 +17,16 @@ header-includes:
 #   - \usepackage{draftwatermark}
   - \usepackage{xurl}
 ---
+# Methanol Fuel Cell - Background
+
+## Chemical Engineering Principles
+
+- Fundamentals (mass and energy balances)
+- Electrochemistry
+- Transport (mass transfer)
+- Kinetics
+
+## Basic References
 
 # Equipment and Reagents
 

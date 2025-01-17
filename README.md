@@ -13,7 +13,7 @@ You can find more information about individual projects below:
 
 [Protein detection](projects/protein detection/README.md)
 
-[Glucose meter](projects/glucose monitor/README.md)
+[Glucose meter](projects/glucose meter/README.md)
 
 [Fuel cell](projects/fuel cell/README.md)
 

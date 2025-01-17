@@ -11,9 +11,9 @@ You can find more information about individual projects below:
 
 [Air quality monitor](projects/air quality monitor/README.md)
 
-Protein detection
+[Protein detection](projects/protein detection/README.md)
 
-Glucose meter
+[Glucose meter](projects/glucose monitor/README.md)
 
-Fuel cell
+[Fuel cell](projects/fuel cell/README.md)
 

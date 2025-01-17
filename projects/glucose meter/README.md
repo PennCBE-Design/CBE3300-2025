@@ -18,6 +18,8 @@ header-includes:
   - \usepackage{xurl}
 ---
 
+# Glucose Meter - Background
+
 # Components
 
 ## Consumables

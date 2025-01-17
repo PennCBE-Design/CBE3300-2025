@@ -19,7 +19,7 @@ header-includes:
   - \usepackage{xurl}
 ---
 
-# Background
+# Water Purifier - Background
 
 ## Premise
 

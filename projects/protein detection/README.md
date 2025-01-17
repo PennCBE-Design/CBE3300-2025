@@ -17,6 +17,17 @@ header-includes:
 #   - \usepackage{draftwatermark}
   - \usepackage{xurl}
 ---
+# Protein Detection - Background
+
+## Chemical Engineering Principles
+
+- Fundamentals (mass and energy balances)
+- Biochemistry
+- Thermodynamics
+- Kinetics
+
+## Basic References
+
 
 # Components
 

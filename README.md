@@ -1,5 +1,4 @@
 # Penn Chemical and Biomolecular Engineering - Hands-On Design
-CBE 3300 for academic year 2024-2025
 
 ## Project Descriptions
 

@@ -35,7 +35,7 @@ header-includes:
 - Transport (mass transfer)
 - Kinetics
 
-## Basis References
+## Basic References
 
 - https://www.sciencedirect.com/science/article/pii/S0273122397001832
 - https://www.usaberkeyfilters.com/products/travel-berkey-system-stainless-bundle-water-filter/

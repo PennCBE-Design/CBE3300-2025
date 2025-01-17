@@ -394,7 +394,7 @@ Example photos:
 ---
 
 # Alternative Options and Project Considerations
-With all of these options, make sure you discuss with Dr. Osuji and the TA before you proceed.
+With all of these options, make sure you discuss with Dr. Osuji and/or the TA before you proceed.
 ### **Project Additions for Students**
 1. **Determination of Equilibration Times:**  
    - Explore required equilibration times for electrodes in glucose solutions to achieve stable measurements.  

@@ -16,6 +16,7 @@ You can find more information about individual projects below.
 [Fuel cell](projects/fuel-cell/README.md)
 
 
+
 ## Resources
 
 Some resources on instrumentation, 3D printing, software, Python, intellectual property and other pertinent topics for the course appear in the content below.

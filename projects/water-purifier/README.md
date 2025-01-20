@@ -74,25 +74,11 @@ header-includes:
 1. 12 V power supply
 1. Barrel jack splitter (to +/- terminals or leads)
 1. CAD files for Arduino UNO case
-    - Bottom  
-        (`project-air-quality/cad/arduino-case-original/UNO_case_bottom.stl`)
-    - Bottom plate pins  
-        (`project-air-quality/cad/corner-pin.3mf`)
-    - Front plate  
-        `project-water-purifier/cad/purifier-face-plate.stl`
-    - Back plate  
-        `project-water-purifier/cad/purifier-back-plate.3mf`
-    - Top  
-        `project-water-purifier/cad/case-top.3mf`
-1. CAD files for flow cell
+    - Arduino UNO 3D encasing
+1. CAD files for flow cell (To be designed by you)
     - Main body  
-        `project-water-purifier/cad/20240627-liquid-chamber.3mf`
     - Sights  
-        `project-water-purifier/cad/20240627-press-view.3mf`
     - Mounting clip (nested U design; cradle and cover)  
-        `project-water-purifier/cad/flow-cell-clip.3mf`  
-        `project-water-purifier/cad/flow-cell-support-1.3mf`  
-        `project-water-purifier/cad/flow-cell-support-2.3mf`
 1. 2x 10K potentiometer (variable resistor)
 1. 2x 220 Ohm resistor
     - 1 for LED

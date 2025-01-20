@@ -91,20 +91,9 @@ This is a device that should detect and report the composition of ambient air. I
 1. 12 V power supply
     - Or stable voltage >= 5 V for analog reference
 1. CAD files for Arduino UNO case
-    - Bottom  
-        (`project-air-quality/cad/arduino-case-original/UNO_case_bottom.stl`)
-    - Top  
-        (`project-air-quality/cad/arduino-case-modified/case-top.3mf`)
-    - Front (optional)  
-        (`project-air-quality/cad/arduino-case-original/UNO_case_front.stl`)
-    - Back (optional)  
-        (`project-air-quality/cad/arduino-case-original/UNO_case_back.stl`)
-    - Support plate  
-        (`project-air-quality/cad/arduino-case-modified/case-mid-support.3mf`)
-    - Bottom plate pins  
-        (`project-air-quality/cad/corner-pin.3mf`)
-    - Support plate pins  
-        (`project-air-quality/cad/d1_2-pin.3mf`)
+    - Arduino UNO 3D encasing
+    - Middle support plate
+       - To be designed and printed by you
 1. Adafruit MiCS5524 - VOC sensor breakout board
 1. Adafruit LPS22 - absolute pressure and temperature sensor breakout board
 1. Adafruit PMSA003I - particulate matter sensor breakout board

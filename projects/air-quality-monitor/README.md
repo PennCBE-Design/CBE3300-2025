@@ -93,7 +93,7 @@ This is a device that should detect and report the composition of ambient air. I
 1. CAD files for Arduino UNO case
     - Arduino UNO 3D encasing
     - Middle support plate
-       - To be designed and printed by you
+       - To be designed by you
 1. Adafruit MiCS5524 - VOC sensor breakout board
 1. Adafruit LPS22 - absolute pressure and temperature sensor breakout board
 1. Adafruit PMSA003I - particulate matter sensor breakout board

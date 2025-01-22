@@ -26,7 +26,9 @@ The Methanol Fuel Cell prototype is able to generate electrical power from feed 
 
 A methanol fuel cell generates electricity from feed streams of methanol and oxygen (here, air). Under acidic conditions, this occurs by anodic oxidation of methanol to yield protons that flow through a proton exchange membrane where they reduce oxygen to water at the anode. The half cell reactions are shown below
 
-$\ce{H2O}$
+Anode: $$\ce{CH3OH + H2O -> 6H+ + 6e- + CO2}$$
+Cathode: $$\ce{3/2 O2 + 6H+ + 6e- -> 3H2O}$$
+
 
 ## Chemical Engineering Principles
 

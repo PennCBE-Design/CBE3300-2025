@@ -1,5 +1,5 @@
 ---
-title: "Project: Glucose Meter"
+title: "Project: Methanol Fuel Cell"
 toc: true
 toc-depth: 2
 numbersections: true
@@ -17,6 +17,10 @@ header-includes:
 #   - \usepackage{draftwatermark}
   - \usepackage{xurl}
 ---
+
+# Methanol Fuel Cell - Description
+The Methanol Fuel Cell prototype is able to generate electrical power from feed streams of air and methanol fed to a fuel cell stack. The device adjusts methanol and air flow rates to maintain power output that is directed to a power bank using USB connectors. Builders will gain experience with chemical processes, electrochemistry, calibration, coding in python, and likely 3D printing. Further extensions could include engineering membrane electrode assemblies, cost performance optimization, etc.
+
 # Methanol Fuel Cell - Background
 
 ## Chemical Engineering Principles
